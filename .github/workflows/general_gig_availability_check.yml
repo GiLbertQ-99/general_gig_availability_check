@@ -3,6 +3,7 @@ name: general_gig_availability_check
 on:
   repository_dispatch:
     types: [craigslist_alert]
+  workflow_dispatch:
 
 jobs:
   autoresponder:
