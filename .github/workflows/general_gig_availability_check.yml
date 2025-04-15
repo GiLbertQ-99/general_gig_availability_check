@@ -1,3 +1,10 @@
+name: general_gig_availability_check
+
+on:
+  workflow_dispatch: # Enables manual triggering of the workflow
+  repository_dispatch: # Allows custom events to trigger the workflow
+    types: [craigslist_alert]
+
 jobs:
   autoresponder:
     runs-on: ubuntu-latest
