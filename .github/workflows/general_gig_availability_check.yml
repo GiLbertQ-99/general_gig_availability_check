@@ -17,7 +17,7 @@ jobs:
       # Step 2: Download the Python script
       - name: Download script
         run: |
-          curl -f -o general_gig_availability_check.py https://raw.githubusercontent.com/GiLbertQ-99/general_gig_availability_check/54243f105bb7887c2aa4a7f454e0d44f2e94fd37/general_gig_availability_check.py
+          curl -f -o general_gig_availability_check.py https://raw.githubusercontent.com/GiLbertQ-99/general_gig_availability_check/main/general_gig_availability_check.py
 
       # Step 3: Validate the download
       - name: Validate download
