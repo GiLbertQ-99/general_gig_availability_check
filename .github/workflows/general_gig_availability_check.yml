@@ -17,33 +17,25 @@ jobs:
       # Step 2: Download the Python script
       - name: Download script
         run: |
-          curl -o general_gig_availability_check.py https://raw.githubusercontent.com/GiLbertQ-99/general_gig_availability_check/54243f105bb7887c2aa4a7f454e0d44f2e94fd37/general_gig_availability_check.py
-
-      # Step 3      
-      - name: Validate download
-        run: cat general_gig_availability_check.py curl -f -o general_gig_availability_check.py https://raw.githubusercontent.com/GiLbertQ-99/general_gig_availability_check/54243f105bb7887c2aa4a7f454e0d44f2e94fd37/general_gig_availability_check.py
-
-      # Step 4
-      - name: Download script
-        run: |
           curl -f -o general_gig_availability_check.py https://raw.githubusercontent.com/GiLbertQ-99/general_gig_availability_check/54243f105bb7887c2aa4a7f454e0d44f2e94fd37/general_gig_availability_check.py
 
-      # Step 5
+      # Step 3: Validate the download
       - name: Validate download
         run: |
           ls -l general_gig_availability_check.py
+          cat general_gig_availability_check.py
 
-      # Step 6: Set up Python environment
+      # Step 4: Set up Python environment
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      # Step 7: Install dependencies
+      # Step 5: Install dependencies
       - name: Install dependencies
         run: |
           pip install -r requirements.txt || true  # Adjust as needed
 
-      # Step 8: Run the downloaded script
+      # Step 6: Run the downloaded script
       - name: Run auto-responder
         run: python general_gig_availability_check.py
