@@ -49,4 +49,4 @@ jobs:
 
       # Step 9: Run the auto-responder script
       - name: Run auto-responder
-        run: python general_gig_availability_check.py
+        run: python general_gig_availability.py
