@@ -15,7 +15,7 @@ jobs:
       # Step 2: Download script
       - name: Download script
         run: |
-          curl -f -o general_gig_availability.py https://${{ secrets.RAW_FILE_PAT }}@https://raw.githubusercontent.com/GiLbertQ-99/general_gig_availability_check/refs/heads/main/general_gig_availability.py
+          curl -f -o general_gig_availability.py https://raw.githubusercontent.com/GiLbertQ-99/general_gig_availability_check/main/general_gig_availability.py
 
       # Step 3: Validate download
       - name: Validate download
